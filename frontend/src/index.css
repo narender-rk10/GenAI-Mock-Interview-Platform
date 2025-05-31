@@ -1,0 +1,404 @@
+:root {
+  --bg-light: #f0f2f5;
+  --bg-dark: #1a1a1a;
+  --card-light: #ffffff;
+  --card-dark: #2a2a2a;
+  --text-light: #1a1a1a;
+  --text-dark: #e0e0e0;
+  --text-secondary-light: #5c5c5c;
+  --text-secondary-dark: #a0a0a0;
+  --primary: #1890ff;
+  --primary-hover: #40a9ff;
+  --border-dark: #3a3a3a;
+  --link-light: #1890ff;
+  --link-dark: #69c0ff;
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.3);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background: var(--bg-light) !important;
+  color: var(--text-light);
+  transition: background 0.3s, color 0.3s;
+}
+
+html.dark,
+body.dark {
+  background: var(--bg-dark) !important;
+  color: var(--text-dark);
+}
+
+html.dark .ant-layout,
+body.dark .ant-layout {
+  background: var(--bg-dark) !important;
+}
+
+.ant-card {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--shadow-light);
+  background: var(--card-light);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+html.dark .ant-card,
+body.dark .ant-card {
+  background: var(--card-dark);
+  box-shadow: 0 2px 8px var(--shadow-dark);
+  border-color: var(--border-dark);
+}
+
+.ant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--shadow-light);
+}
+
+html.dark .ant-card:hover,
+body.dark .ant-card:hover {
+  box-shadow: 0 4px 12px var(--shadow-dark);
+}
+
+.ant-btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  border-radius: 4px;
+}
+
+.ant-btn-primary:hover {
+  background: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+html.dark .ant-btn-primary,
+body.dark .ant-btn-primary {
+  background: #2b6cb0;
+}
+
+html.dark .ant-btn-primary:hover,
+body.dark .ant-btn-primary:hover {
+  background: #3182ce;
+}
+
+.ant-input,
+.ant-select-selector,
+.ant-input-textarea textarea {
+  border-radius: 4px;
+  background: var(--card-light);
+  color: var(--text-light);
+  border-color: #d9d9d9;
+}
+
+html.dark .ant-input,
+html.dark .ant-select-selector,
+html.dark .ant-input-textarea textarea,
+body.dark .ant-input,
+body.dark .ant-select-selector,
+body.dark .ant-input-textarea textarea {
+  background: var(--card-dark);
+  color: var(--text-dark);
+  border-color: var(--border-dark);
+}
+
+html.dark .ant-input::placeholder,
+html.dark .ant-select-placeholder,
+html.dark .ant-input-textarea textarea::placeholder,
+body.dark .ant-input::placeholder,
+body.dark .ant-select-placeholder,
+body.dark .ant-input-textarea textarea::placeholder {
+  color: var(--text-secondary-dark);
+}
+
+.ant-form-item-label>label {
+  color: var(--text-light);
+}
+
+html.dark .ant-form-item-label>label,
+body.dark .ant-form-item-label>label {
+  color: var(--text-dark);
+}
+
+.ant-collapse {
+  background: transparent;
+  border-color: #d9d9d9;
+}
+
+html.dark .ant-collapse,
+body.dark .ant-collapse {
+  background: transparent;
+  border-color: var(--border-dark);
+}
+
+.ant-collapse-header {
+  color: var(--text-light) !important;
+  background: var(--card-light);
+}
+
+html.dark .ant-collapse-header,
+body.dark .ant-collapse-header {
+  color: var(--text-dark) !important;
+  background: var(--card-dark);
+}
+
+.ant-collapse-content {
+  background: var(--card-light);
+  color: var(--text-light);
+}
+
+html.dark .ant-collapse-content,
+body.dark .ant-collapse-content {
+  background: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode-collapse {
+  background: transparent !important;
+}
+
+html.dark .dark-mode-collapse,
+body.dark .dark-mode-collapse {
+  background: transparent !important;
+}
+
+html.dark .dark-mode-collapse .ant-collapse-content,
+body.dark .dark-mode-collapse .ant-collapse-content {
+  background: var(--card-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+.ant-slider-rail {
+  background: #d9d9d9;
+}
+
+html.dark .ant-slider-rail,
+body.dark .ant-slider-rail {
+  background: #4a4a4a;
+}
+
+.ant-slider-track {
+  background: var(--primary);
+}
+
+html.dark .ant-slider-track,
+body.dark .ant-slider-track {
+  background: #2b6cb0;
+}
+
+.ant-slider-handle {
+  border-color: var(--primary);
+}
+
+html.dark .ant-slider-handle,
+body.dark .ant-slider-handle {
+  border-color: #2b6cb0;
+}
+
+.ant-progress-circle .ant-progress-text {
+  color: var(--text-light);
+}
+
+html.dark .ant-progress-circle .ant-progress-text,
+body.dark .ant-progress-circle .ant-progress-text {
+  color: var(--text-dark);
+}
+
+.ant-table {
+  background: var(--card-light);
+}
+
+html.dark .ant-table,
+body.dark .ant-table {
+  background: var(--card-dark);
+}
+
+.ant-table-thead>tr>th {
+  background: var(--card-light);
+  color: var(--text-light);
+}
+
+html.dark .ant-table-thead>tr>th,
+body.dark .ant-table-thead>tr>th {
+  background: var(--card-dark);
+  color: var(--text-dark);
+}
+
+.ant-table-tbody>tr>td {
+  border-color: #d9d9d9;
+  color: var(--text-light);
+}
+
+html.dark .ant-table-tbody>tr>td,
+body.dark .ant-table-tbody>tr>td {
+  border-color: var(--border-dark);
+  color: var(--text-dark);
+}
+
+.dark-mode-table {
+  background: var(--card-light) !important;
+}
+
+html.dark .dark-mode-table,
+body.dark .dark-mode-table {
+  background: var(--card-dark) !important;
+}
+
+html.dark .dark-mode-table .ant-table,
+body.dark .dark-mode-table .ant-table {
+  background: var(--card-dark) !important;
+}
+
+html.dark .dark-mode-table .ant-table-thead>tr>th,
+body.dark .dark-mode-table .ant-table-thead>tr>th {
+  background: var(--card-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+html.dark .dark-mode-table .ant-table-tbody>tr>td,
+body.dark .dark-mode-table .ant-table-tbody>tr>td {
+  background: var(--card-dark) !important;
+  color: var(--text-dark) !important;
+  border-color: var(--border-dark) !important;
+}
+
+.dark-mode-select .ant-select-selector {
+  background: var(--card-light) !important;
+  color: var(--text-light) !important;
+}
+
+html.dark .dark-mode-select .ant-select-selector,
+body.dark .dark-mode-select .ant-select-selector {
+  background: var(--card-dark) !important;
+  color: var(--text-dark) !important;
+}
+
+.dark-mode-slider .ant-slider-mark-text {
+  color: var(--text-light) !important;
+}
+
+html.dark .dark-mode-slider .ant-slider-mark-text,
+body.dark .dark-mode-slider .ant-slider-mark-text {
+  color: var(--text-dark) !important;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--card-light);
+  box-shadow: 0 2px 4px var(--shadow-light);
+  padding: 12px 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+html.dark .navbar,
+body.dark .navbar {
+  background: var(--card-dark);
+  box-shadow: 0 2px 4px var(--shadow-dark);
+}
+
+.navbar a {
+  font-size: 16px;
+  margin: 0 12px;
+}
+
+.content {
+  padding-top: 80px;
+}
+
+.card-content {
+  padding: 12px;
+}
+
+.video-player {
+  width: 100%;
+  max-height: 300px;
+  border-radius: 4px;
+}
+
+.chart-container {
+  max-width: 100%;
+  margin: 8px 0;
+  padding: 4px;
+  background: var(--card-light);
+  border-radius: 4px;
+}
+
+html.dark .chart-container,
+body.dark .chart-container {
+  background: var(--card-dark);
+}
+
+.carousel-item {
+  padding: 12px;
+  background: var(--card-light);
+  border-radius: 8px;
+  box-shadow: 0 1px 4px var(--shadow-light);
+}
+
+html.dark .carousel-item,
+body.dark .carousel-item {
+  background: var(--card-dark);
+  box-shadow: 0 1px 4px var(--shadow-dark);
+}
+
+a {
+  color: var(--link-light);
+}
+
+html.dark a,
+body.dark a {
+  color: var(--link-dark);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.ant-menu {
+  background: transparent !important;
+}
+
+html.dark .ant-menu,
+body.dark .ant-menu {
+  background: transparent !important;
+}
+
+.ant-menu-item {
+  color: var(--text-secondary-light) !important;
+}
+
+html.dark .ant-menu-item,
+body.dark .ant-menu-item {
+  color: var(--text-secondary-dark) !important;
+}
+
+.ant-menu-item-selected {
+  background: var(--primary) !important;
+  color: #ffffff !important;
+}
+
+html.dark .ant-menu-item-selected,
+body.dark .ant-menu-item-selected {
+  background: #2b6cb0 !important;
+  color: #ffffff !important;
+}
+
+.ant-drawer-body {
+  padding: 0 !important;
+}
+
+.ant-drawer-header {
+  border-bottom: 1px solid var(--border-dark);
+}
